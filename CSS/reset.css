@@ -14,13 +14,22 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:link {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
 }
 
 img,
@@ -47,8 +56,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
-
 
 #root,
 #__next {

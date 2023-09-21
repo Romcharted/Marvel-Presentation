@@ -6,9 +6,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0b0a124d;
+    background-color: #0b0a1266; /* 66 =  40% d'opacité*/
     position: fixed;
     padding: 0px 60px;
+    z-index: 99;
 }
 
 .logo {
