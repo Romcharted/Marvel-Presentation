@@ -1,0 +1,81 @@
+@import "variables.css";
+
+header {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0a124d;
+    position: fixed;
+    padding: 0px 60px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.container-btn-menu {
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+
+.btn-burger {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    padding: 0;
+    cursor: pointer;
+    left: calc(50% - 40px);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-burger .bar {
+    position: absolute;
+    left: 20%;
+    width: 50px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: transform 0.8s ease;
+}
+
+.btn-burger .bar.bar--1 {
+    transform: translate3d(0, -7px, 0);
+}
+
+.btn-burger .bar.bar--2 {
+    transform: translate3d(0, 7px, 0);
+}
+
+.btn-burger:hover .bar--1 {
+    transform: translate3d(0, -7px, 0) rotate(-180deg);
+}
+
+.btn-burger:hover .bar--2 {
+    transform: translate3d(0, 7px, 0) rotate(-180deg);
+}
+
+.btn-burger.active .bar {
+    transition: transform 0.6s ease;
+}
+
+.btn-burger.active .bar.bar--1 {
+    transform: translate3d(0, 0px, 0) rotate(-135deg);
+}
+
+.btn-burger.active .bar.bar--2 {
+    transform: translate3d(0, 0px, 0) rotate(-225deg);
+}
+
+.btn-burger.active:hover .bar.bar--1 {
+    transform: translate3d(0, 0px, 0) rotate(-315deg);
+}
+
+.btn-burger.active:hover .bar.bar--2 {
+    transform: translate3d(0, 0px, 0) rotate(-405deg);
+}

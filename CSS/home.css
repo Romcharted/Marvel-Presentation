@@ -1,0 +1,16 @@
+@import "variables.css";
+
+@font-face {
+    font-family: "American Captain";
+    src: url("../Font/AmericanCaptain.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /*font-family: "American Captain", sans-serif;*/
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    height: 200vh;
+}
