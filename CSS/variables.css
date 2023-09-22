@@ -1,4 +1,11 @@
 /* variables.css */
+@font-face {
+    font-family: "American Captain";
+    src: url("../Font/AmericanCaptain.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --primary-color: #0b0a12;
     --secondary-color: #321dfe;
