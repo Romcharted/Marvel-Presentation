@@ -1,13 +1,17 @@
-// Permet de récupérer les informations dans le json timeline et de les ajouter dans la section timeline
+// Permet de récupérer les informations dans le json timeline et de les ajouter dans la section timeline + application de l'animation Gsap
 
 let timeline = document.getElementById("timeline");
 
 fetch("../Data/timeline.json")
     .then((response) => response.json())
     .then((data) => {
+        // Création de la timeline
         data.forEach((item) => {
+            const containerMovieDiv = document.createElement("div");
+            containerMovieDiv.classList.add("container-movie");
+
             const movieDiv = document.createElement("div");
-            movieDiv.classList.add("movie"); // Ajoutez une classe à la div
+            movieDiv.classList.add("movie");
 
             const dateSpan = document.createElement("span");
             dateSpan.textContent = item.date;
@@ -17,8 +21,44 @@ fetch("../Data/timeline.json")
 
             movieDiv.appendChild(dateSpan);
             movieDiv.appendChild(titleParagraph);
+            containerMovieDiv.appendChild(movieDiv);
+            timeline.appendChild(containerMovieDiv);
+        });
 
-            timeline.appendChild(movieDiv);
+        // Après la création dans le DOM de la timeline
+        const containers = document.querySelectorAll(".container-movie");
+
+        containers.forEach((container) => {
+            gsap.set(container, { opacity: 0, x: -400 }); // Propriétés initiales
+
+            // Timeline d'animation pour chaque conteneur
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: container,
+                    start: "top 90%",
+                    end: "bottom 10%",
+                    scrub: 1,
+                },
+            });
+
+            tl.to(container, {
+                duration: 1,
+                ease: "power2.out",
+                opacity: 1,
+                x: 0,
+            });
+
+            // Ajoutez une animation de sortie
+            tl.to(
+                container,
+                {
+                    duration: 1,
+                    ease: "power2.in",
+                    opacity: 0,
+                    x: 400,
+                },
+                ">1.2"
+            );
         });
     })
     .catch((error) => {
@@ -27,31 +67,3 @@ fetch("../Data/timeline.json")
             error
         );
     });
-
-// Sélectionnez tous les éléments .movie
-const movies = document.querySelectorAll(".movie");
-// Parcourez chaque film et ajoutez des animations avec GSAP
-movies.forEach((movie, index) => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: movie,
-            start: "top 80%", // Démarrez l'animation lorsque le haut du film atteint 80% de la vue
-            end: "top 20%", // Arrêtez l'animation lorsque le haut du film atteint 20% de la vue
-            toggleActions: "play none none reverse", // Jouez l'animation lors de l'entrée, inversez-la lors de la sortie
-        },
-    });
-
-    // Animation d'entrée de gauche à droite
-    tl.fromTo(
-        movie,
-        { x: "-100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 0.5 }
-    );
-
-    // Animation de sortie de droite à gauche
-    tl.to(
-        movie,
-        { x: "100%", opacity: 0, duration: 0.5 },
-        `+=${index === movies.length - 1 ? 0 : 0.25}` // Ajoutez un délai entre les animations
-    );
-});
