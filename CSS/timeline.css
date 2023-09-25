@@ -1,0 +1,50 @@
+@import "variables.css";
+
+#timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-family: "American Captain", sans-serif;
+    padding: 50px 20px 20px 20px;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.movie {
+    padding: 20px 20px 10px 20px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-color);
+    position: relative;
+}
+
+.movie p {
+    background-color: var(--primary-color);
+    font-size: 24px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.movie span {
+    background-color: var(--secondary-color);
+    font-size: 30px;
+    position: absolute;
+    top: -30px;
+    width: 80px;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .movie {
+        width: 60vw;
+    }
+}
