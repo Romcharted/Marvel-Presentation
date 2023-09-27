@@ -6,6 +6,7 @@
     gap: 50px;
     font-family: "American Captain", sans-serif;
     padding: 50px 10vw;
+    overflow: hidden;
 }
 
 .timeline-title {

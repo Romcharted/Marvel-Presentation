@@ -43,7 +43,7 @@ fetch("../Data/timeline.json")
 
             tl.to(container, {
                 duration: 1,
-                ease: "power2.out",
+                ease: "steps.out",
                 opacity: 1,
                 x: 0,
             });
@@ -53,7 +53,7 @@ fetch("../Data/timeline.json")
                 container,
                 {
                     duration: 1,
-                    ease: "power2.in",
+                    ease: "steps.in",
                     opacity: 0,
                     x: 400,
                 },
