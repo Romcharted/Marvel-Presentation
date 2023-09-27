@@ -22,8 +22,10 @@
     height: 100%;
     border-radius: 0 100% 100% 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
     padding-left: 0vw;
     overflow: hidden;
 }
@@ -36,7 +38,14 @@
     transform: translateX(100%);
 }
 
-.container-discover p {
-    font-size: 40px;
+.container-discover h2 {
+    font-size: 75px;
     color: var(--primary-color);
+    font-family: "American Captain", sans-serif;
+}
+
+.container-discover img {
+    width: 60vw;
+    height: auto;
+    max-height: 600px;
 }

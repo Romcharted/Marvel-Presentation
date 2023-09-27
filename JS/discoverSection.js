@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const timeline = gsap.timeline({
         scrollTrigger: {
             trigger: ".discover",
+            duration: 5000,
             start: "center center",
-            end: "bottom top",
+            end: "+=2000",
             scrub: 1,
             pin: true,
         },
@@ -21,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     timeline.to(containerDiscover, {
-        width: "140%",
-        duration: 1,
+        width: "120%",
+        duration: 8,
         borderRadius: 0,
         paddingLeft: 15,
         onUpdate: () => {

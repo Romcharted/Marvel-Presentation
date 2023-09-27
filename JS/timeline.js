@@ -36,7 +36,7 @@ fetch("../Data/timeline.json")
                 scrollTrigger: {
                     trigger: container,
                     start: "top 90%",
-                    end: "bottom 10%",
+                    end: "bottom 0%",
                     scrub: 1,
                 },
             });
