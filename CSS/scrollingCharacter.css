@@ -55,13 +55,13 @@ section.container-text .text__content-character {
     z-index: 2;
 }
 
-.text__content-character h3 {
+.text__content-character h2 {
     font-family: "American Captain", sans-serif;
     font-size: 75px;
     width: 100%;
 }
 
-.text__content-character h3 span {
+.text__content-character h2 span {
     width: 100%;
     display: block;
     padding-left: 60px;
@@ -98,7 +98,7 @@ section.container-text .text__content-character {
 /* ============================  Responsive ============================ */
 @media screen and (max-width: 1024px) {
     /* ========= Container Text ========= */
-    .text__content-character h3 {
+    .text__content-character h2 {
         font-size: 60px;
     }
     .text__content-character p {
@@ -128,7 +128,7 @@ section.container-text .text__content-character {
         padding: 20px;
     }
 
-    .text__content-character h3 {
+    .text__content-character h2 {
         font-size: 40px;
     }
     .text__content-character p {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,11 @@
         <link rel="stylesheet" href="./CSS/variables.css" type="text/css" />
         <link rel="stylesheet" href="./CSS/home.css" type="text/css" />
         <link rel="stylesheet" href="./CSS/header.css" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="./CSS/horizontalScroll.css"
+            type="text/css"
+        />
         <link
             rel="stylesheet"
             href="./CSS/scrollingCharacter.css"
@@ -44,7 +49,56 @@
         </header>
 
         <main>
-            <div class="home"></div>
+            <div class="home">
+                <div class="container__animated-text">
+                    <h1>
+                        <div class="animated-text">
+                            <span class="hidden-text">Bienvenue</span>
+                        </div>
+                        <div class="animated-text">
+                            <span class="hidden-text">decouvrez l'univers</span>
+                        </div>
+                        <div class="animated-text">
+                            <span class="hidden-text"
+                                >cinematographique de Marvel</span
+                            >
+                        </div>
+                    </h1>
+                </div>
+
+                <div class="container__obj-menu">
+                    <a href="">
+                        <div class="obj-menu phases">
+                            <span class="sub-title">Decouvrez les</span>
+                            <p class="title">Phases</p>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="obj-menu personnages">
+                            <span class="sub-title">Decouvrez les</span>
+                            <p class="title">Personnages</p>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="obj-menu chronologie">
+                            <span class="sub-title">Decouvrez la</span>
+                            <p class="title">Chronologie</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================================ Horizontal Scroll ================================ -->
+            <div class="container__horizontal-scroll">
+                <section class="panel red">ONE</section>
+                <section class="panel orange">TWO</section>
+                <section class="panel purple">THREE</section>
+                <section class="panel green">FOUR</section>
+                <section class="panel gray">FIVE</section>
+            </div>
+            <!-- ================================ End Horizontal Scroll ================================ -->
 
             <!-- ================================ Scrolling character ================================ -->
             <div class="scrolling-character">
@@ -59,7 +113,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Captain <br /><span>America</span></h3>
+                                <h2>Captain <br /><span>America</span></h2>
                                 <p>
                                     Captain America, également connu sous le nom
                                     de Steve Rogers, est un super-héros
@@ -96,7 +150,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Iron <br /><span>Man</span></h3>
+                                <h2>Iron <br /><span>Man</span></h2>
                                 <p>
                                     Iron Man, alias Tony Stark, est un génie de
                                     l'ingénierie et un milliardaire
@@ -133,7 +187,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3><span>Thor</span></h3>
+                                <h2><span>Thor</span></h2>
                                 <p>
                                     Thor est le dieu nordique de la foudre et du
                                     tonnerre. Armé de son puissant marteau
@@ -168,7 +222,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Black <br /><span>Widow</span></h3>
+                                <h2>Black <br /><span>Widow</span></h2>
                                 <p>
                                     Black Widow, alias Natasha Romanoff, est une
                                     espionne russe hautement qualifiée et une
@@ -204,7 +258,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3><span>Hulk</span></h3>
+                                <h2><span>Hulk</span></h2>
                                 <p>
                                     Hulk, c'est le docteur Bruce Banner
                                     lorsqu'il se transforme en une créature
@@ -240,7 +294,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Spider <br /><span>Man</span></h3>
+                                <h2>Spider <br /><span>Man</span></h2>
                                 <p>
                                     Spider-Man, alias Peter Parker, est un
                                     adolescent doté de pouvoirs d'araignée,
@@ -277,7 +331,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Docteur <br /><span>Strange</span></h3>
+                                <h2>Docteur <br /><span>Strange</span></h2>
                                 <p>
                                     Le Docteur Stephen Strange était autrefois
                                     un chirurgien renommé, mais après un
@@ -312,7 +366,7 @@
                     <section class="container-text">
                         <div class="content-character">
                             <div class="text__content-character">
-                                <h3>Scarlet <br /><span>Witch</span></h3>
+                                <h2>Scarlet <br /><span>Witch</span></h2>
                                 <p>
                                     Wanda Maximoff, également connue sous le nom
                                     de Scarlet Witch, possède des pouvoirs de
@@ -371,6 +425,7 @@
 
     <script src="./JS/app.js"></script>
     <script src="./JS/header.js"></script>
+    <script src="./JS/horizontalScroll.js"></script>
     <script src="./JS/timeline.js"></script>
     <script src="./JS/discoverSection.js"></script>
 </html>
