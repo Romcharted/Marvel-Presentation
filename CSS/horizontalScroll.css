@@ -1,0 +1,43 @@
+.container__horizontal-scroll {
+    overscroll-behavior: none;
+    width: 600%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.red {
+    background: red;
+}
+
+.orange {
+    background: orange;
+}
+
+.purple {
+    background: purple;
+}
+
+.green {
+    background: green;
+}
+.gray {
+    background: gray;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.panel:last-child {
+}
