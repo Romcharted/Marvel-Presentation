@@ -2,7 +2,9 @@
 
 let timeline = document.getElementById("timeline");
 
-fetch("../Data/timeline.json")
+fetch(
+    "https://romainsonnetpro.github.io/Marvel-Presentation/Data/timeline.json"
+)
     .then((response) => response.json())
     .then((data) => {
         // Création de la timeline
