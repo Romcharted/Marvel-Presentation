@@ -49,3 +49,15 @@
     height: auto;
     max-height: 600px;
 }
+
+/* ============================  Responsive ============================ */
+
+@media screen and (max-width: 767px) {
+    .container-discover h2 {
+        font-size: 55px;
+    }
+
+    .container-discover img {
+        width: 90vw;
+    }
+}
