@@ -10,6 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const menuLinks = document.querySelectorAll(".smooth-link");
+
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const targetPosition =
+                    targetElement.getBoundingClientRect().top + window.scrollY;
+
+                // Faire défiler la page jusqu'à la section cible en douceur
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth",
+                });
+            }
+        });
+    });
+
     const menus = gsap.utils.toArray(".obj-menu");
     menus.forEach((menu, index) => {
         gsap.from(menu, {
@@ -19,22 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: 1,
             scrollTrigger: {
                 trigger: ".home",
-                start: `top+=${index * 100}px`,
-                end: "bottom 20%",
+                start: "top top",
+                end: "center top",
                 scrub: true,
-                markers: true,
             },
         });
-    });
-
-    gsap.to(".home", {
-        scrollTrigger: {
-            trigger: ".home",
-            start: "top top",
-            end: "+=100%", // Épingle jusqu'à la fin du document
-            pin: true,
-            scrub: true,
-            markers: true,
-        },
     });
 });
