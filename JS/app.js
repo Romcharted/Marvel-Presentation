@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
+    /* ============================ Animation text home ============================ */
     // Animation du texte dans la partie home
     const animatedText = document.querySelectorAll(".animated-text");
     animatedText.forEach((element) => {
@@ -9,10 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.add("active");
         }
     });
+    /* ============================ END Animation text home ============================ */
 
-    const menuLinks = document.querySelectorAll(".smooth-link");
+    /* ============================ OBJ MENU ============================ */
+    const objMenuLinks = document.querySelectorAll(".smooth-link");
 
-    menuLinks.forEach((link) => {
+    objMenuLinks.forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
             const targetId = link.getAttribute("href").substring(1);
@@ -32,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const menus = gsap.utils.toArray(".obj-menu");
-    menus.forEach((menu, index) => {
+    const objMenus = gsap.utils.toArray(".obj-menu");
+    objMenus.forEach((menu, index) => {
         gsap.from(menu, {
             opacity: 0,
             y: 100,
@@ -47,4 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     });
+
+    /* ============================ END OBJ MENU ============================ */
 });

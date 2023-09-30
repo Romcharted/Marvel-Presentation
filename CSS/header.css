@@ -34,6 +34,7 @@ header {
     left: calc(50% - 40px);
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 99;
 }
 
 .btn-burger .bar {
@@ -80,3 +81,42 @@ header {
 .btn-burger.active:hover .bar.bar--2 {
     transform: translate3d(0, 0px, 0) rotate(-405deg);
 }
+
+/* ======================== Menu ======================== */
+.menu {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 9;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu.open {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu a {
+    color: var(--text-color);
+    font-size: 80px;
+    text-decoration: none;
+    padding: 10px 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    font-family: "American Captain", sans-serif;
+    text-shadow: 2px 2px 3px #000000;
+}
+/* ======================== End Menu ======================== */
