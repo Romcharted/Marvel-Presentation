@@ -29,7 +29,6 @@ panels.forEach((panel, index) => {
     if (index === 0) {
         duration = 0;
     }
-    console.log(heightIMG * nbImgInCol2);
     timeline
 
         .to(panels, {

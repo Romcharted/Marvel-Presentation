@@ -59,6 +59,7 @@ body {
     display: flex;
     justify-content: center;
     text-shadow: 2px 2px 3px #000000;
+    text-align: center;
 }
 .hidden-text {
     position: absolute;

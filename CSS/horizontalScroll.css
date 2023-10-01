@@ -6,6 +6,12 @@
     flex-wrap: nowrap;
 }
 
+.container__horizontal-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .red {
     background: #222;
 }
@@ -91,10 +97,15 @@
 
 @media screen and (max-width: 764px) {
     .panel .container-text__panel h2 {
-        font-size: 65px;
+        font-size: 55px;
     }
 
     .panel .container-text__panel p {
-        font-size: 18px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 764px) {
+    .container__horizontal-scroll {
+        width: 500%; /* Réduisez la largeur à 100% sur les écrans plus petits (mobiles) */
     }
 }
