@@ -1,13 +1,13 @@
 .container__horizontal-scroll {
     overscroll-behavior: none;
-    width: 600%;
+    width: 500%;
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
 }
 
 .red {
-    background: red;
+    background: #222;
 }
 
 .orange {
@@ -29,15 +29,72 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     font-weight: 600;
     font-size: 1.5em;
-    text-align: center;
-    color: white;
+    color: var(--text-color);
     position: relative;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.panel:last-child {
+.panel .container-text__panel {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+}
+.panel .container-text__panel h2 {
+    font-size: 90px;
+    font-family: "American Captain", sans-serif;
+    opacity: 0;
+}
+
+.panel .container-poster {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.panel .container-poster .col1,
+.panel .container-poster .col2 {
+    width: 100%;
+    height: 100%;
+}
+
+.panel .container-poster .col2 {
+    /* transform: translateY(-97%);*/
+}
+
+.panel .container-poster img {
+    width: 100%;
+    height: 66%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .panel {
+        flex-direction: column-reverse;
+    }
+
+    .panel .container-text__panel,
+    .panel .container-poster {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .panel .container-text__panel h2 {
+        font-size: 65px;
+    }
+
+    .panel .container-text__panel p {
+        font-size: 18px;
+    }
 }
