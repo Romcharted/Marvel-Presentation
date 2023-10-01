@@ -28,6 +28,7 @@
             href="./CSS/discoverSection.css"
             type="text/css"
         />
+        <link rel="stylesheet" href="./CSS/footer.css" type="text/css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -36,7 +37,12 @@
     </head>
     <body>
         <header>
-            <img src="./IMG/Avengers-logo.png" alt="Marvel Logo" class="logo" />
+            <a href="#accueil">
+                <img
+                    src="./IMG/Avengers-logo.png"
+                    alt="Marvel Logo"
+                    class="logo"
+            /></a>
             <div
                 class="container-btn-menu"
                 aria-label="Ouvrir le menu de navigation"
@@ -426,13 +432,28 @@
 
             <!-- ================================ End Discover Section ================================ -->
 
-            <div style="height: 100vh; background-color: red"></div>
+            <footer>
+                <img
+                    src="./IMG/Avengers-logo.png"
+                    alt="Avengers logo"
+                    class="footer-logo"
+                />
+                <a
+                    href="https://github.com/romainsonnetpro/Marvel-Presentation"
+                    target="_blank"
+                >
+                    <div class="container-github">
+                        <img src="./IMG/github-mark.svg" alt="Github SVG" />
+                        Code Source
+                    </div>
+                </a>
+            </footer>
         </main>
     </body>
 
     <script src="./JS/app.js"></script>
     <script src="./JS/header.js"></script>
     <script src="./JS/horizontalScroll.js"></script>
-    <script src="./JS/timeline.js"></script>
-    <script src="./JS/discoverSection.js"></script>
+    <script src="./JS/discoverSection.js" type="module"></script>
+    <script src="./JS/timeline.js" type="module"></script>
 </html>

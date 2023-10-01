@@ -1,3 +1,6 @@
+// On import discoverSection pour déclenché l'animation après que tous soit chargé
+import { discoverSectionSpiderMan } from "./discoverSection.js";
+
 // Permet de récupérer les informations dans le json timeline et de les ajouter dans la section timeline + application de l'animation Gsap
 
 let timeline = document.getElementById("timeline");
@@ -38,14 +41,14 @@ fetch(
                 scrollTrigger: {
                     trigger: container,
                     start: "top 90%",
-                    end: "bottom 0%",
+                    end: "bottom 10%",
                     scrub: 1,
                 },
             });
 
             tl.to(container, {
                 duration: 1,
-                ease: "steps.out",
+                ease: "power2.out",
                 opacity: 1,
                 x: 0,
             });
@@ -55,13 +58,15 @@ fetch(
                 container,
                 {
                     duration: 1,
-                    ease: "steps.in",
+                    ease: "power2.in",
                     opacity: 0,
                     x: 400,
                 },
                 ">1.2"
             );
         });
+
+        discoverSectionSpiderMan();
     })
     .catch((error) => {
         console.error(

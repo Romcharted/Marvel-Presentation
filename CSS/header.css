@@ -118,5 +118,10 @@ header {
     transform: translateY(-20px);
     font-family: "American Captain", sans-serif;
     text-shadow: 2px 2px 3px #000000;
+    transition: 0.3s all;
+}
+
+.menu a:hover {
+    transform: scale(1.1) !important;
 }
 /* ======================== End Menu ======================== */

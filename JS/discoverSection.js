@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+const discoverSectionSpiderMan = () => {
+    // Votre code GSAP ici
     const containerDiscover = document.querySelector(".container-discover");
     const cobweb = document.querySelector(".cobweb");
 
@@ -35,4 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
             cobweb.style.transform = `translateX(${containerWidth}px)`;
         },
     });
-});
+};
+
+export { discoverSectionSpiderMan };
