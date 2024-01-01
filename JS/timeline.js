@@ -5,9 +5,7 @@ import { discoverSectionSpiderMan } from "./discoverSection.js";
 
 let timeline = document.getElementById("timeline");
 
-fetch(
-    "https://romainsonnetpro.github.io/Marvel-Presentation/Data/timeline.json"
-)
+fetch("https://romcharted.github.io/Marvel-Presentation/Data/timeline.json")
     .then((response) => response.json())
     .then((data) => {
         // Création de la timeline
